@@ -13,7 +13,7 @@ The room temperature will be controlled using a potentiometer as a knob. There w
 
 To implement this system, the following hardware components will be required:
 
-1. Device master: A device master will be used to manage and control multiple devices connected.
+1. Device Master: A device master will be used to manage and control multiple devices connected.
 2. Device Slave: A device slave will be used to transmit the temperature data from the DHT11 sensor via a serial connection.
 3. Potentiometer: A potentiometer will be used as a knob to control the room temperature.
 4. DHT11 Sensor: A DHT11 sensor will be used to measure the room temperature.
