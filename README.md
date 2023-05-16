@@ -36,6 +36,7 @@ Some things that need to be noted is that the software needs to read data from a
 ![Progress_1](assets/Progress_1.jpg)
 ![Progress_1](assets/Progress_2.jpg)
 
+Due to the use of the DHT11 sensor component which does not use an interrupt implementation, when moving the knob with the results shown on the display there is a delay which takes quite a while, which is about 1 second. Then for the use of the MAX7219 7-Segment Display component which does not sufficiently cover a lot of digital information, it causes the characters that can be displayed to be limited. Lastly, for potentiometers or knobs it has less intuition allowing for nimble feedback when setting the desired temperature .
 ## Conclusion and future work
 
 The implemented temperature control system offers users an easy-to-use and intuitive solution for temperature regulation. It incorporates the MAX7219 7-Segment Display and SG90 servo to provide precise temperature measurement, adjustable temperature targets, and visually appealing temperature displays. The system aims to enhance user experience with optimal display, control mechanisms, and responsiveness. Even though the results did not match our expectations, it was an amazing project to do and we hope to do more projects such as this but with better user experience and functionalities.
