@@ -20,18 +20,13 @@ Serial Connection: A serial connection will be used to transmit the temperature 
 7-Segment Display: A 7-Segment Display will be used to display the target temperature and the current temperature.
 Mini Servo SG90: A mini servo SG90 will be used to control the heating or cooling system in the room.
 
-The implementation of this system will involve the following steps:
-
-1. Install the potentiometer as the control knob for the temperature control.
-2. Install the DHT11 sensor to measure the room temperature and transmit data via the serial connection to the microcontroller.
-3. Connect the serial connection to the microcontroller and display the temperature data on the 7-Segment Display.
-4. Implement the mini servo SG90 to control the heating or cooling system in the room.
-5. Connect the mini servo SG90 to the microcontroller to receive commands for temperature control.
-6. Test the system to ensure proper functionality and adjust the temperature control as necessary.
+The thermostat implementation involves using a DHT11 sensor to measure room temperature and transmit data to an Arduino Uno. A potentiometer is used as a control knob to adjust the target temperature, which is displayed on the Max7219 7-Segment Display connected to the microcontroller. The SG90 mini servo is utilized to indicate temperature changes by responding to rotations of the potentiometer knob. Arduino Uno is chosen as the ideal microcontroller for this project due to its SPI capabilities for communication with the 7-segment display and its internal configurable timer for generating the required PWM signal for the servo. Additionally, the Arduino Uno can read analog signals through its built-in ADC.
 
 ## Software implementation details
 ---
+The code consists of two main parts, initialization and the main loop. In the initialization state, the program will initiliaze everything needed for the program to do its' functions such as pins, enabling certain functionalities such as SPI. While the main loop consists of tasks that are needed to be done and that includes reading the data from DHT11 sensor and potentiomter, displaying those datas through the 7-segment display, and moving the servo based on those datas.
 
+Some things that need to be noted is that the software needs to read data from a DHT11 sensor by receiving the data serially and storing it in data registers. Due to the sensor's slow sampling rate, delays need to be implemented using internal timers or the microcontroller's frequency. The program should also read data from a potentiometer using the ADC and convert it to a 10-bit value stored in registers. The data range needs to be adjusted from 0-1023 to 16-31 through arithmetic operations. The MAX7219 7-segment display will be used to display the received data using SPI communication. Finally, an SG90 servo will be controlled using PWM signals, where a value of 1500 represents a stationary state, and values above or below will move the servo in different directions, and timer is used to set the PWM signal length.
 
 ## Test results and performance evaluation
 ---
@@ -40,4 +35,4 @@ The implementation of this system will involve the following steps:
 
 ## Conclusion and future work
 ---
-
+The implemented temperature control system offers users an easy-to-use and intuitive solution for temperature regulation. It incorporates the MAX7219 7-Segment Display and SG90 servo to provide precise temperature measurement, adjustable temperature targets, and visually appealing temperature displays. The system aims to enhance user experience with optimal display, control mechanisms, and responsiveness. Even though the results did not match our expectations, it was an amazing project to do and we hope to do more projects such as this but with better user experience and functionalities.
