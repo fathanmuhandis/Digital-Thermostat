@@ -10,8 +10,8 @@ main:
 ; start of main function
   RCALL init_functions ; call subroutines used for initializing components/functionalities
 main_loop:
-  RCALL servo_l1
   RCALL DHT11_sensor
+  RCALL servo_l1
 
   RJMP main_loop ; jump back to start of main loop
 
@@ -33,10 +33,11 @@ servo_init:
     RET
 ;-----------------------------------------------------------
 servo_l1: 
-    ;LDI R16, 11
-    ;MUL R31, R16       ;load rotation pos
-    ;MOV R31, R0
-    LDI R31, 90
+    LDI R16, 7
+    MUL R31, R16       ;load rotation pos
+    MOV R31, R0
+    SUBI R31, -35
+    ;LDI R31, 90
     RCALL servo_rotate    ;& rotate servo
     RET           ;go back & repeat
 ;---------------------------------------------------------------
