@@ -7,6 +7,8 @@ Traditional mechanical thermostats are known for their inaccuracies and ineffici
 
 Digital thermostats offer a solution to the problems associated with traditional thermostats. They are equipped with microprocessors that enable accurate temperature sensing and control. Digital thermostats can be programmed to adjust temperature settings according to specific schedules, resulting in optimized energy consumption. They can also be remotely controlled using smartphones or other devices, allowing for greater flexibility in temperature control. Additionally, digital thermostats can display energy usage information, enabling users to track and analyze their energy consumption patterns. Overall, digital thermostats provide a more efficient and precise way to regulate the temperature of a building or a room, leading to energy conservation and cost savings.
 
+![Progress_1](assets/Progress_1.jpg)
+
 ## Hardware design and implementation details
 ---
 The room temperature will be controlled using a potentiometer as a knob. There will also be a room temperature reading from a device slave that has a DHT11 sensor installed, and it will transmit data via a serial connection. The second temperature readings, the target temperature, and the current temperature, will be displayed on a digital display. The temperature control will also affect a valve actuator that will be implemented using a mini servo SG90.
