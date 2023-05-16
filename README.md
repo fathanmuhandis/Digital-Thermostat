@@ -29,8 +29,6 @@ The implementation of this system will involve the following steps:
 5. Connect the mini servo SG90 to the microcontroller to receive commands for temperature control.
 6. Test the system to ensure proper functionality and adjust the temperature control as necessary.
 
-Overall, this hardware design and implementation will provide a reliable and effective means of controlling the temperature in a room using a potentiometer, DHT11 sensor, microcontroller, serial connection, 7-Segment Display, and mini servo SG90.
-
 ## Software implementation details
 ---
 
@@ -38,6 +36,7 @@ Overall, this hardware design and implementation will provide a reliable and eff
 ## Test results and performance evaluation
 ---
 ![Progress_1](assets/Progress_1.jpg)
+![Progress_1](assets/Progress_2.jpg)
 
 ## Conclusion and future work
 ---
