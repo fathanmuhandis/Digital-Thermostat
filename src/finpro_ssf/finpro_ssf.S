@@ -151,7 +151,9 @@ ADC_wait:
 DHT11_sensor:
 ;-----------------------------------------------------------------
 DHT11_agn:
-RCALL DHT11_delay_2s      ;wait 2s for DHT11 to get ready
+
+;RCALL servo_delay_05s
+;RCALL DHT11_delay_2s      ;wait 2s for DHT11 to get ready
 ; start_signal
     SBI   DDRD, 7       ;pin PD7 as o/p
     CBI   PORTD, 7      ;first, send low pulse
