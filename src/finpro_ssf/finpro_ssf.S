@@ -11,7 +11,7 @@ main:
   RCALL init_functions ; call subroutines used for initializing components/functionalities
 main_loop:
   RCALL DHT11_sensor
-  RCALL servo_l1
+  RCALL servo_loop
 
   RJMP main_loop ; jump back to start of main loop
 
@@ -32,7 +32,7 @@ servo_init:
     SBI   DDRB, 4         ;pin PB4 o/p for servo control
     RET
 ;-----------------------------------------------------------
-servo_l1: 
+servo_loop: 
     LDI R16, 7
     MUL R31, R16       ;load rotation pos
     MOV R31, R0
